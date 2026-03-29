@@ -9,12 +9,15 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync fork
-        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          upstream_sync_repo: CharlyIslami/FinBear
-          upstream_sync_branch: main
-          target_sync_branch: main
-          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync upstream
+        run: |
+          git remote add upstream https://github.com/CharlyIslami/FinBear.git
+          git fetch upstream
+          git checkout main
+          git merge upstream/main --no-edit
+          git push origin main
