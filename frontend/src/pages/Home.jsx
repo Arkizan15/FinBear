@@ -17,6 +17,15 @@ function Home() {
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 p-4">
+                {isProfileOpen && (
+                    <div className='bg-gray-300 w-64 p-6 rounded-t-lg flex flex-col items-center gap-4'>
+                        <FaUserCircle size={80} className='text-gray-600'/>
+                        <p className='text-center text-sm font-medium'>Login untuk melihat level beruang</p>
+                        <button className='bg-white w-full py-2 rounded font-bold tracking-widest text-sm'>
+                        LOGIN
+                        </button>
+                    </div>
+                )}
                 <button onClick={() => setIsProfileOpen(!isProfileOpen)} 
                     className="flex items-center gap-15 bg-gray-300 px-6 py-3 rounded-lg cursor-pointer">
                     <FaUserCircle className="text-gray-600" size={32}/>
