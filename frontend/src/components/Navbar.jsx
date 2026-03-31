@@ -4,7 +4,7 @@ function Navbar() {
     return(
         <nav className='flex items-center justify-between px-8 py-4 pr-20 bg-[#241919]'>
             <div className='flex items-center gap-2'>
-                <img src="/logo.png" alt="FinBear" className='w-11 h-11 rounded-full'/>
+                <img src="/logo.png" alt="FinBear" className='w-12 h-12 rounded-full'/>
                 <span style={{ fontFamily: "'Press Start 2P', cursive" }} className='text-base text-white'>FinBear</span>
             </div>
             <div className='flex gap-15'>
