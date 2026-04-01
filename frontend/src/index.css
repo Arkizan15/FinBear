@@ -4,6 +4,10 @@
     font-family: 'Nunito', sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 .nav-link {
     position: relative;
     text-decoration: none;

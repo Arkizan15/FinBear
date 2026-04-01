@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 function Navbar() {
     return(
-        <nav className='flex items-center justify-between px-8 py-4 pr-20 bg-[#241919]'>
+        <nav className='fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 pr-20 bg-[#241919]'>
             <div className='flex items-center gap-2'>
                 <img src="/logo.png" alt="FinBear" className='w-12 h-12 rounded-full'/>
                 <span style={{ fontFamily: "'Press Start 2P', cursive" }} className='text-base text-white'>FinBear</span>
