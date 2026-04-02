@@ -32,7 +32,7 @@ function Home() {
                 <button onClick={() => setIsProfileOpen(!isProfileOpen)} 
                     className="flex items-center gap-15 bg-gray-300 px-6 py-3 rounded-b-lg cursor-pointer w-64">
                     <FaUserCircle className="text-gray-600" size={32}/>
-                    <span className="font-semibold cursor-pointer">Profil</span>
+                    <span className="font-semibold cursor-pointer   ">Profil</span>
                 </button>
             </div>
         </div>

@@ -3,70 +3,129 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [mode, setMode] = useState("menu");
+  const [loginUsername, setLoginUsername] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [registerUsername, setRegisterUsername] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
   const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    console.log("Login Data:", {
+      username: loginUsername,
+      password: loginPassword,
+    });
+  };
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    console.log("Register Data:", {
+      username: registerUsername,
+      password: registerPassword,
+    });
+  };
   return (
-    <div className="bg-linear-to-br from-[#DDD788] to-[#B8A355] h-screen overflow-hidden">
-      <button
-        onClick={() => navigate("/")}
-        className="mt-20 mx-20 cursor-pointer text-gray-950 "
-      >
-        ← Kembali ke Home
-      </button>
-      <div className="flex flex-col justify-center items-center min-h-[calc(100vh-64  px)]">
-        <h1
-          className="text-6xl pt-20 mb-10"
-          style={{ fontFamily: "'Jersey 20', sans-serif" }}
-        >
-          Welcome
-        </h1>
+    <div className="bg-[#59669C] h-screen overflow-hidden">
+      <div className="flex justify-center items-center h-full">
+        <div className="bg-[#ABB3DA] backdrop-blur-md p-40 rounded-2xl shadow-lg flex flex-col justify-center items-center w-fit gap-6">
+          <h1
+            className="text-7xl mb-10 text-[#1b1a1f]"
+            style={{ fontFamily: "'Jersey 20', sans-serif" }}
+          >
+            Welcome
+          </h1>
 
-        {mode === "menu" && (
-          <div className="flex flex-col gap-5 items-center">
-            <button
-              onClick={() => setMode("signup")}
-              className="bg-[#241919] px-16 py-3 rounded text-white hover:opacity-80 transiton cursor-pointer"
+          {mode === "menu" && (
+            <div className="flex flex-col gap-5 items-center">
+              <button
+                onClick={() => navigate("/")}
+                className="absolute top-5 left-5 cursor-pointer"
+              >
+                ← Kembali ke Home
+              </button>
+              <button
+                onClick={() => setMode("signup")}
+                className="bg-[#1b1a1f] px-20 py-5 rounded text-white hover:opacity-80 transiton cursor-pointer"
+              >
+                Sign Up
+              </button>
+              <button
+                onClick={() => setMode("signin")}
+                className="bg-[#1b1a1f] px-21 py-5 rounded text-white hover:opacity-80 transiton cursor-pointer"
+              >
+                Sign In
+              </button>
+            </div>
+          )}
+
+          {mode === "signin" && (
+            <form
+              onSubmit={handleLogin}
+              className="flex flex-col gap-5 items-center"
             >
-              Sign Up
-            </button>
-            <button
-              onClick={() => setMode("signin")}
-              className="bg-[#241919] px-16 py-3 rounded text-white hover:opacity-80 transiton cursor-pointer"
+              <input
+                type="text"
+                placeholder="Masukkan Username"
+                value={loginUsername}
+                onChange={(e) => setLoginUsername(e.target.value)}
+                className="bg-[#1b1a1f] px-10 py-3 rounded text-center outline-none text-white"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={loginPassword}
+                onChange={(e) => setLoginPassword(e.target.value)}
+                className="bg-[#1b1a1f] px-10 py-3 rounded text-center outline-none text-white"
+              />
+
+              <button className="mt-3 cursor-pointer" type="submit">
+                Masuk
+              </button>
+
+              <button
+                onClick={() => setMode("menu")}
+                className="text-sm mt-2 cursor-pointer"
+              >
+                ← Kembali
+              </button>
+            </form>
+          )}
+
+          {mode === "signup" && (
+            <form
+              onSubmit={handleRegister}
+              className="flex flex-col gap-5 items-center"
             >
-              Sign In
-            </button>
-          </div>
-        )}
+              <input
+                type="text"
+                placeholder="Masukkan Username"
+                value={registerUsername}
+                onChange={(e) => setRegisterUsername(e.target.value)}
+                className="bg-[#1b1a1f] px-10 py-3 rounded text-center outline-none text-white"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={registerPassword}
+                onChange={(e) => setRegisterPassword(e.target.value)}
+                className="bg-[#1b1a1f] px-10 py-3 rounded text-center outline-none text-white"
+              />
 
-        {mode === "signin" && (
-          <div className="flex flex-col gap-5 items-center">
-            <input
-              type="text"
-              placeholder="Masukkan Username"
-              className="bg-[#A88C8C] px-10 py-3 rounded text-center outline-none"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              className="bg-[#A88C8C] px-10 py-3 rounded text-center outline-none"
-            />
+              <button
+                className="mt-3 font-semibold cursor-pointer"
+                type="submit"
+              >
+                Daftar
+              </button>
 
-            <button className="mt-3">Masuk</button>
-
-            <button onClick={() => setMode("menu")} className="text-sm mt-2">
-              ← Kembali
-            </button>
-          </div>
-        )}
-
-        {mode === "signup" && (
-          <div className="flex flex-col gap-5 items-center">
-            <p>Form Sign Up nanti di sini</p>
-
-            <button onClick={() => setMode("menu")} className="text-sm mt-2">
-              ← Kembali
-            </button>
-          </div>
-        )}
+              <button onClick={() => setMode("menu")} className="text-sm mt-2">
+                ← Kembali
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </div>
   );
