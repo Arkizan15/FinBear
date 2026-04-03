@@ -7,24 +7,70 @@ function Login() {
   const [loginPassword, setLoginPassword] = useState("");
   const [registerUsername, setRegisterUsername] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    setError("");
+    setLoading(true);
 
-    console.log("Login Data:", {
-      username: loginUsername,
-      password: loginPassword,
-    });
+    try {
+      const response = await fetch("http://localhost:3000/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: loginUsername,
+          password: loginPassword,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Login failed");
+      }
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+      navigate("/");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
+    setError("");
+    setLoading(true);
 
-    console.log("Register Data:", {
-      username: registerUsername,
-      password: registerPassword,
-    });
+    try {
+      const response = await fetch("http://localhost:3000/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: registerUsername,
+          password: registerPassword,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Registration failed");
+      }
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+      navigate("/");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <div className="bg-[#59669C] h-screen overflow-hidden">
@@ -41,7 +87,7 @@ function Login() {
             <div className="flex flex-col gap-5 items-center">
               <button
                 onClick={() => navigate("/")}
-                className="absolute top-5 left-5 cursor-pointer"
+                className="absolute top-5 left-5 cursor-pointer text-white"
               >
                 ← Kembali ke Home
               </button>
@@ -80,9 +126,10 @@ function Login() {
                 className="bg-[#1b1a1f] px-10 py-3 rounded text-center outline-none text-white"
               />
 
-              <button className="mt-3 cursor-pointer" type="submit">
-                Masuk
+              <button className="mt-3 cursor-pointer text-[#1b1a1f] font-semibold bg-white px-8 py-2 rounded" type="submit" disabled={loading}>
+                {loading ? "Loading..." : "Masuk"}
               </button>
+              {error && <p className="text-red-500 text-sm">{error}</p>}
 
               <button
                 onClick={() => setMode("menu")}
@@ -114,13 +161,15 @@ function Login() {
               />
 
               <button
-                className="mt-3 font-semibold cursor-pointer"
+                className="mt-3 font-semibold cursor-pointer text-[#1b1a1f] bg-white px-8 py-2 rounded"
                 type="submit"
+                disabled={loading}
               >
-                Daftar
+                {loading ? "Loading..." : "Daftar"}
               </button>
+              {error && <p className="text-red-500 text-sm">{error}</p>}
 
-              <button onClick={() => setMode("menu")} className="text-sm mt-2">
+              <button onClick={() => { setMode("menu"); setError(""); }} className="text-sm mt-2 cursor-pointer text-white">
                 ← Kembali
               </button>
             </form>

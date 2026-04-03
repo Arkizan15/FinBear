@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": "1775197962382",
+      "username": "popo",
+      "password": "$2b$10$m7N88V15/6TxR28z7GshQ.P5X6N2Hia51IShGxKuUcIHSo3ZE7LA6",
+      "createdAt": "2026-04-03T06:32:42.382Z"
+    }
+  ],
+  "modules": [],
+  "quizzes": [],
+  "achievements": [],
+  "userProgress": [],
+  "userAchievements": []
+}
