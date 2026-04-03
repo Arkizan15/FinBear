@@ -6,6 +6,16 @@ function Home() {
     const [isProfileOpen, setIsProfileOpen] = useState(false);
     const navigate = useNavigate();
 
+    // Check if user is logged in
+    const userString = localStorage.getItem('user');
+    const user = userString ? JSON.parse(userString) : null;
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        setIsProfileOpen(false);
+    };
+
     return(
         <div className="bg-linear-to-br from-[#DDD788] to-[#B8A355] min-h-screen relative">
             <div className="flex items-center justify-between px-30 py-50">
@@ -23,10 +33,21 @@ function Home() {
                 {isProfileOpen && (
                     <div className='bg-gray-300 w-64 p-6 rounded-t-lg flex flex-col items-center gap-4'>
                         <FaUserCircle size={80} className='text-gray-600'/>
-                        <p className='text-center text-sm font-medium'>Login untuk melihat level beruang</p>
-                        <button className='bg-white w-full py-2 rounded font-bold tracking-widest text-sm cursor-pointer' onClick={() => navigate('/login')}>
-                        LOGIN
-                        </button>
+                        {user ? (
+                            <>
+                                <p className='text-center text-sm font-bold text-gray-800 text-lg'>Hi, {user.username}!</p>
+                                <button className='bg-red-500 text-white w-full py-2 rounded font-bold tracking-widest text-sm cursor-pointer' onClick={handleLogout}>
+                                LOGOUT
+                                </button>
+                            </>
+                        ) : (
+                            <>
+                                <p className='text-center text-sm font-medium'>Login untuk melihat level beruang</p>
+                                <button className='bg-white w-full py-2 rounded font-bold tracking-widest text-sm cursor-pointer' onClick={() => navigate('/login')}>
+                                LOGIN
+                                </button>
+                            </>
+                        )}
                     </div>
                 )}
                 <button onClick={() => setIsProfileOpen(!isProfileOpen)} 
