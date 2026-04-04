@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet  } from "react-router-dom";
 import Loading from "./pages/Loading";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import ScrollToTop from "./components/ScrollToTop";
+import Profile from "./pages/Profile";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,15 +24,16 @@ const App = () => {
             <>
               <Navbar />
               <div className="pt-16">
-                <Routes>
-                  <Route path="/" element={<Home />}/>
-                </Routes>
+                <Outlet />
               </div>
             </>
           }
-        />
+        >
+          <Route index element={<Home />}/>
+          <Route path="profile" element={<Profile />}/>
+        </Route>
       </Routes>
-    </>
+    </> 
   )
 };
 
