@@ -5,6 +5,12 @@
       "username": "popo",
       "password": "$2b$10$m7N88V15/6TxR28z7GshQ.P5X6N2Hia51IShGxKuUcIHSo3ZE7LA6",
       "createdAt": "2026-04-03T06:32:42.382Z"
+    },
+    {
+      "id": "1775357664854",
+      "username": "loremipsum",
+      "password": "$2b$10$lYYBu2Wpablr2CaQXkw7FuZQxPxcTt6wULbea7fID1CLNvDOtbyju",
+      "createdAt": "2026-04-05T02:54:24.854Z"
     }
   ],
   "modules": [],
