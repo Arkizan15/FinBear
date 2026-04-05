@@ -1,5 +1,6 @@
 import { FaUserCircle } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom';
+import BearModel from '../components/BearModel';
 
 function Home() {
     const navigate = useNavigate();
@@ -7,7 +8,7 @@ function Home() {
 
     return(
         <div className="bg-linear-to-br from-[#DDD788] to-[#B8A355] min-h-screen relative">
-            <div className="flex items-center justify-between px-30 py-50">
+            <div className="flex items-center justify-between px-30 py-20">
                 <div className="flex flex-col gap-4 ml-50">
                     <h1 className="text-7xl font-bold tracking-wide" style={{ fontFamily: "'Jersey 20', cursive" }}>
                         Kelola uang <br /> jadi <span className="" style={{ fontFamily: "'Jersey 20', cursive" }}>lebih cerdas</span>
@@ -16,6 +17,10 @@ function Home() {
                         FinBear hadir untuk membantu kamu belajar keuangan, mencatat pemasukan & pengeluaran, serta meraih tujuan finansialmu 
                         dengan cara yang menyenangkan.
                     </p>
+                </div>
+
+                <div className='w-112.5 h-137.5'>
+                    <BearModel />
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 p-4">
