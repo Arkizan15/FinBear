@@ -1,20 +1,9 @@
 import { FaUserCircle } from 'react-icons/fa'
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
-    const [isProfileOpen, setIsProfileOpen] = useState(false);
     const navigate = useNavigate();
-
-    // Check if user is logged in
-    const userString = localStorage.getItem('user');
-    const user = userString ? JSON.parse(userString) : null;
-
-    const handleLogout = () => {
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        setIsProfileOpen(false);
-    };
+    const savedImage = localStorage.getItem('profileImage');
 
     return(
         <div className="bg-linear-to-br from-[#DDD788] to-[#B8A355] min-h-screen relative">
@@ -30,29 +19,13 @@ function Home() {
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 p-4">
-                {isProfileOpen && (
-                    <div className='bg-gray-300 w-64 p-6 rounded-t-lg flex flex-col items-center gap-4'>
-                        <FaUserCircle size={80} className='text-gray-600'/>
-                        {user ? (
-                            <>
-                                <p className='text-center text-sm font-bold text-gray-800 text-lg'>Hi, {user.username}!</p>
-                                <button className='bg-red-500 text-white w-full py-2 rounded font-bold tracking-widest text-sm cursor-pointer' onClick={handleLogout}>
-                                LOGOUT
-                                </button>
-                            </>
-                        ) : (
-                            <>
-                                <p className='text-center text-sm font-medium'>Login untuk melihat level beruang</p>
-                                <button className='bg-white w-full py-2 rounded font-bold tracking-widest text-sm cursor-pointer' onClick={() => navigate('/login')}>
-                                LOGIN
-                                </button>
-                            </>
-                        )}
-                    </div>
-                )}
-                <button onClick={() => setIsProfileOpen(!isProfileOpen)} 
-                    className="flex items-center gap-15 bg-gray-300 px-6 py-3 rounded-b-lg cursor-pointer w-64">
-                    <FaUserCircle className="text-gray-600" size={32}/>
+                <button onClick={() => navigate('/profile')}
+                    className="flex items-center gap-15 bg-gray-300 px-6 py-3 rounded-lg cursor-pointer w-60">
+                    {savedImage ? (
+                        <img src={savedImage} className='w-13 h-13 rounded-full object-cover' />
+                    ) : (
+                        <FaUserCircle className='text-gray-600' size={32}/>
+                    )}
                     <span className="font-semibold cursor-pointer   ">Profil</span>
                 </button>
             </div>
