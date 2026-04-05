@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
     const navigate = useNavigate();
+    const savedImage = localStorage.getItem('profileImage');
 
     return(
         <div className="bg-linear-to-br from-[#DDD788] to-[#B8A355] min-h-screen relative">
@@ -20,7 +21,11 @@ function Home() {
             <div className="absolute bottom-0 left-0 p-4">
                 <button onClick={() => navigate('/profile')}
                     className="flex items-center gap-15 bg-gray-300 px-6 py-3 rounded-lg cursor-pointer w-60">
-                    <FaUserCircle className="text-gray-600" size={32}/>
+                    {savedImage ? (
+                        <img src={savedImage} className='w-13 h-13 rounded-full object-cover' />
+                    ) : (
+                        <FaUserCircle className='text-gray-600' size={32}/>
+                    )}
                     <span className="font-semibold cursor-pointer   ">Profil</span>
                 </button>
             </div>
