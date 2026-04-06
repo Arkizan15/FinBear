@@ -13,9 +13,13 @@ function Profile() {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setProfileImage(imageUrl);
-      localStorage.setItem("profileImage", imageUrl);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64 = reader.result;
+        setProfileImage(base64);
+        localStorage.setItem("profileImage", base64);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
