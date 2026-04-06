@@ -7,6 +7,10 @@
       "createdAt": "2026-04-03T06:32:42.382Z"
     },
     {
+      "id": "1775274748255",
+      "username": "user",
+      "password": "$2b$10$k9nh7HAJ05MvnGn9.SDj9.RFjSqLcsZe9tCHjiqWRFH6qGRb2pR9C",
+      "createdAt": "2026-04-04T03:52:28.255Z"
       "id": "1775357664854",
       "username": "loremipsum",
       "password": "$2b$10$lYYBu2Wpablr2CaQXkw7FuZQxPxcTt6wULbea7fID1CLNvDOtbyju",
@@ -17,5 +21,16 @@
   "quizzes": [],
   "achievements": [],
   "userProgress": [],
-  "userAchievements": []
+  "userAchievements": [],
+  "transactions": [
+    {
+      "id": "1775279601423",
+      "userId": "1775274748255",
+      "type": "income",
+      "amount": 35000,
+      "category": "uang jajan",
+      "description": "uang jajan sekolah",
+      "createdAt": "2026-04-04T05:13:21.423Z"
+    }
+  ]
 }
