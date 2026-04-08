@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaUserCircle, FaPencilAlt, FaPen } from "react-icons/fa";
+import { useAuth } from "../context/AuthContext";
 
 function Profile() {
   const navigate = useNavigate();
@@ -9,6 +10,7 @@ function Profile() {
   const userString = localStorage.getItem("user");
   const user = userString ? JSON.parse(userString) : null;
   const token = localStorage.getItem("token");
+  const { setUser } = useAuth();
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -27,6 +29,7 @@ function Profile() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     localStorage.removeItem("profileImage");
+    setUser(null);
     navigate("/login");
   };
 

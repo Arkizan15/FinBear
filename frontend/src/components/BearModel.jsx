@@ -2,10 +2,19 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { useAuth } from "../context/AuthContext";
 
 function BearModel() {
   const mountRef = useRef(null);
+  const { user } = useAuth();
+  const points = user?.points ?? 0;
 
+  const bearModel =
+    points >= 100
+      ? "/beruangdewasa.glb"
+      : points >= 50
+        ? "/beruangremaja.glb"
+        : "/beruangkecil.glb";
   useEffect(() => {
     // Setup Scene, Camera, Renderer
     const scene = new THREE.Scene();
@@ -34,9 +43,11 @@ function BearModel() {
 
     // Load model beruang
     const loader = new GLTFLoader();
-    loader.load("/beruangkecil.glb", (gltf) => {
-      gltf.scene.position.set(0, -0.5, 0); // turunkan beruang
+    let bearObject = null;
+    loader.load(bearModel, (gltf) => {
+      gltf.scene.position.set(0, -0.5, 0);
       scene.add(gltf.scene);
+      bearObject = gltf.scene;
     });
 
     // OrbitControls
@@ -46,6 +57,9 @@ function BearModel() {
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
+      if (bearObject) {
+        bearObject.rotation.y += 0.003;
+      }
       controls.update();
       renderer.render(scene, camera);
     };
@@ -55,7 +69,7 @@ function BearModel() {
       mountRef.current?.removeChild(renderer.domElement);
       renderer.dispose();
     };
-  }, []);
+  }, [bearModel]);
 
   return <div ref={mountRef} className="w-full h-full" />;
 }
