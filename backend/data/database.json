@@ -29,7 +29,21 @@
       "createdAt": "2026-04-08T14:27:09.506Z"
     }
   ],
-  "modules": [],
+  "modules": [
+    {
+      "id": 1,
+      "title": "Dasar-dasar keuangan",
+      "description": "Penghasilan, tabungan, dan investasi",
+      "points": 35,
+      "slides": [
+        {
+          "slidenumber": 1,
+          "title": "Selamat datang di Bab 1: Penghasilan, Tabungan, dan Investasi 💡",
+          "content": "Pada bab ini, kamu akan mempelajari dasar penting dalam keuangan,\n yaitu bagaimana mendapatkan penghasilan, menyimpan uang melalui tabungan, \n dan mengembangkannya lewat investasi.Ketiga hal ini merupakan langkah awal untuk \n mengelola keuangan dengan lebih bijak dan terarah.Dengan memahaminya, kamu bisa mulai \n membangun kebiasaan finansial yang baik sejak dini.Materi disusun secara sederhana agar mudah \n dipahami,jadi kamu bisa belajar dengan santai. \n tetap semangat ya dalam belajar dan jangan lupa menyimak setiap bagian dengan baik! \n Di sesi berikutnya akan ada kuis seru yang bisa kamu ikuti untuk mendapatkan poin \n dan meningkatkan level beruangmu 🐻✨ \n\nYuk mulai dan pelajari dasar keuanganmu sekarang!"
+        }
+      ]
+    }
+  ],
   "quizzes": [],
   "achievements": [],
   "userProgress": [],
