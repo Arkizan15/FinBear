@@ -5,6 +5,7 @@ import { initDB } from './src/config/database.js'
 import authRoutes from './src/routes/authRoutes.js'
 import financeRoutes from './src/routes/financeRoutes.js'
 import moduleRoutes from './src/routes/moduleRoutes.js'
+import userRoutes from './src/routes/userRoutes.js'
 
 dotenv.config()
 
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 app.use('/auth', authRoutes)
 app.use('/finance', financeRoutes)
 app.use('/modules', moduleRoutes)
+app.use('/user', userRoutes)
 
 // Start server
 const startServer = async () => {

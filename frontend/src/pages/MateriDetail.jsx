@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { div } from "three/src/nodes/TSL.js";
+import { useAuth } from "../context/AuthContext";
 
 function MateriDetail() {
   const { id } = useParams();
@@ -8,6 +8,9 @@ function MateriDetail() {
   const [module, setModule] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loading, setLoading] = useState(true);
+  const { user, setUser } = useAuth();
+  const isLastSlide = module && currentSlide === module.slides.length - 1;
+
   useEffect(() => {
     const fetchModule = async () => {
       try {
@@ -26,6 +29,59 @@ function MateriDetail() {
 
   if (loading) return <div>Loading ...</div>;
   if (!module) return <div>Modul tidak ditemukan</div>;
+  const handleClaimPoints = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/user/points", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: user.id,
+          points: module.points,
+        }),
+      });
+      const data = await response.json();
+      setUser({ ...user, points: data.points });
+      navigate("/belajar");
+    } catch (error) {
+      console.error("Error claiming points:", error);
+    }
+  };
+  if (isLastSlide)
+    return (
+      <div className="bg-linear-to-br from-[#DDD788] to-[#B8A355] min-h-screen">
+        <div className="max-w-3xl mx-auto px-20 py-10">
+          <h2
+            className="text-2xl font-bold mb-6"
+            style={{ fontFamily: "'Jersey 20', cursive" }}
+          >
+            {module.title}
+          </h2>
+          <div className="bg-[#E0CEA9] rounded-2xl p-8">
+            <h3
+              className="text-center font-bold text-xl mb-6"
+              style={{ fontFamily: "'Jersey 20', cursive" }}
+            >
+              SELAMAT 🎉
+            </h3>
+            <p>
+              Anda mendapatkan poin karena sudah menyelesaikan materi pada bab
+              ini. Silahkan ambil poin dan melanjutkan ke materi selanjutnya
+            </p>
+          </div>
+          <div className="flex justify-end mt-6">
+            <button
+              onClick={() =>
+                !user ? navigate("/notregistered") : handleClaimPoints()
+              }
+              className="bg-[#241919] text-white px-8 py-3 rounded-xl font-semibold"
+            >
+              Ambil Poin
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+
   return (
     <div className="bg-linear-to-br from-[#DDD788] to-[#B8A355] min-h-screen">
       <div className="max-w-3xl mx-auto px-6 py-10">
@@ -52,10 +108,23 @@ function MateriDetail() {
             {module.slides[currentSlide].content}
           </p>
         </div>
-        <div className="flex justify-end mt-6">
-        <button className="bg-[#241919] text-white px-8 py-3 rounded-xl font-semibold">
-          Mulai
-        </button>
+        <div className="flex justify-between mt-6">
+          {currentSlide > 0 && (
+            <button
+              onClick={() => setCurrentSlide(currentSlide - 1)}
+              className="bg-[#241919] text-white px-8 py-3 rounded-xl font-semibold"
+            >
+              Sebelumnya
+            </button>
+          )}
+          <div className="ml-auto">
+            <button
+              onClick={() => setCurrentSlide(currentSlide + 1)}
+              className="bg-[#241919] text-white px-8 py-3 rounded-xl font-semibold"
+            >
+              {currentSlide === 0 ? "Mulai" : "Selanjutnya"}
+            </button>
+          </div>
         </div>
       </div>
     </div>

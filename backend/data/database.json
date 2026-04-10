@@ -11,7 +11,7 @@
       "id": "1775274748255",
       "username": "user",
       "password": "$2b$10$k9nh7HAJ05MvnGn9.SDj9.RFjSqLcsZe9tCHjiqWRFH6qGRb2pR9C",
-      "points": 0,
+      "points": 70,
       "createdAt": "2026-04-04T03:52:28.255Z"
     },
     {
@@ -39,7 +39,25 @@
         {
           "slidenumber": 1,
           "title": "Selamat datang di Bab 1: Penghasilan, Tabungan, dan Investasi 💡",
-          "content": "Pada bab ini, kamu akan mempelajari dasar penting dalam keuangan,\n yaitu bagaimana mendapatkan penghasilan, menyimpan uang melalui tabungan, \n dan mengembangkannya lewat investasi.Ketiga hal ini merupakan langkah awal untuk \n mengelola keuangan dengan lebih bijak dan terarah.Dengan memahaminya, kamu bisa mulai \n membangun kebiasaan finansial yang baik sejak dini.Materi disusun secara sederhana agar mudah \n dipahami,jadi kamu bisa belajar dengan santai. \n tetap semangat ya dalam belajar dan jangan lupa menyimak setiap bagian dengan baik! \n Di sesi berikutnya akan ada kuis seru yang bisa kamu ikuti untuk mendapatkan poin \n dan meningkatkan level beruangmu 🐻✨ \n\nYuk mulai dan pelajari dasar keuanganmu sekarang!"
+          "content": "Pada bab ini, kamu akan mempelajari dasar penting dalam keuangan,\n yaitu bagaimana mendapatkan penghasilan, menyimpan uang melalui tabungan, \n dan mengembangkannya lewat investasi.Ketiga hal ini merupakan langkah awal untuk \n mengelola keuangan dengan lebih bijak dan terarah.Dengan memahaminya, kamu bisa mulai \n membangun kebiasaan finansial yang baik sejak dini. Materi disusun secara sederhana agar mudah \n dipahami,jadi kamu bisa belajar dengan santai. \n tetap semangat ya dalam belajar dan jangan lupa menyimak setiap bagian dengan baik! \n Di sesi berikutnya akan ada kuis seru yang bisa kamu ikuti untuk mendapatkan poin \n dan meningkatkan level beruangmu 🐻✨ \n\nYuk mulai dan pelajari dasar keuanganmu sekarang!"
+        },
+        {
+          "slidenumber": 2,
+          "title": "💰 Materi: Penghasilan (Income)",
+          "content": "📌 1. Pengertian Penghasilan\n Penghasilan adalah uang atau nilai yang diperoleh seseorang\n dari suatu aktivitas dalam periode tertentu. seperti (harian, mingguan, atau bulanan). \n 👉 Contoh: \n • Gaji dari kerja \n • Uang jajan dari orang tua \n • Keuntungan jualan"
+        },
+        {
+          "slidenumber": 3,
+          "title": "📊 2. Jenis-Jenis Penghasilan",
+          "content": "1. Active Income (Penghasilan Aktif) \n Penghasilan yang didapat dari bekerja langsung. \n ✅ Contoh: \n • Gaji karyawan \n • Upah harian \n • Fee freelance \n 📌 Ciri: \n • Harus kerja dulu baru dapat uang \n • Kalau berhenti kerja → penghasilan berhenti"
+        },
+        {
+          "slidenumber": 4,
+          "content": "2. Passive Income (Penghasilan Pasif) \n Penghasilan yang tetap masuk tanpa \n harus bekerja terus-menerus. \n ✅ Contoh: \n • Sewa rumah \n • Dividen saham \n • Bisnis yang sudah berjalan otomatis \n 📌 Ciri: \n • Tidak perlu kerja setiap waktu \n • Bisa tetap dapat uang walau lagi istirahat"
+        },
+        {
+          "slidenumber": 5,
+          "content": "3. Portfolio Income \n Penghasilan dari investasi atau aset keuangan \n ✅ Contoh: \n • Keuntungan saham \n • obligasi \n • Reksa dana"
         }
       ]
     }
