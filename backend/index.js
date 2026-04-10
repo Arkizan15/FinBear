@@ -3,6 +3,8 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import { initDB } from './src/config/database.js'
 import authRoutes from './src/routes/authRoutes.js'
+import financeRoutes from './src/routes/financeRoutes.js'
+import moduleRoutes from './src/routes/moduleRoutes.js'
 
 dotenv.config()
 
@@ -18,6 +20,8 @@ app.get('/', (req, res) => {
   res.json({ message: 'FinBear API is running 🐻' })
 })
 app.use('/auth', authRoutes)
+app.use('/finance', financeRoutes)
+app.use('/modules', moduleRoutes)
 
 // Start server
 const startServer = async () => {

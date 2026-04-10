@@ -4,12 +4,59 @@
       "id": "1775197962382",
       "username": "popo",
       "password": "$2b$10$m7N88V15/6TxR28z7GshQ.P5X6N2Hia51IShGxKuUcIHSo3ZE7LA6",
+      "points": 0,
       "createdAt": "2026-04-03T06:32:42.382Z"
+    },
+    {
+      "id": "1775274748255",
+      "username": "user",
+      "password": "$2b$10$k9nh7HAJ05MvnGn9.SDj9.RFjSqLcsZe9tCHjiqWRFH6qGRb2pR9C",
+      "points": 0,
+      "createdAt": "2026-04-04T03:52:28.255Z"
+    },
+    {
+      "id": "1775357664854",
+      "username": "loremipsum",
+      "password": "$2b$10$lYYBu2Wpablr2CaQXkw7FuZQxPxcTt6wULbea7fID1CLNvDOtbyju",
+      "points": 0,
+      "createdAt": "2026-04-05T02:54:24.854Z"
+    },
+    {
+      "id": "1775658429506",
+      "username": "aldis burger",
+      "password": "$2b$10$udl7pWCrSUwuDaVo2hJsOexRffCvktWgC.GVWH/EN1iEwESOXjHOC",
+      "points": 0,
+      "createdAt": "2026-04-08T14:27:09.506Z"
     }
   ],
-  "modules": [],
+  "modules": [
+    {
+      "id": 1,
+      "title": "Dasar-dasar keuangan",
+      "description": "Penghasilan, tabungan, dan investasi",
+      "points": 35,
+      "slides": [
+        {
+          "slidenumber": 1,
+          "title": "Selamat datang di Bab 1: Penghasilan, Tabungan, dan Investasi 💡",
+          "content": "Pada bab ini, kamu akan mempelajari dasar penting dalam keuangan,\n yaitu bagaimana mendapatkan penghasilan, menyimpan uang melalui tabungan, \n dan mengembangkannya lewat investasi.Ketiga hal ini merupakan langkah awal untuk \n mengelola keuangan dengan lebih bijak dan terarah.Dengan memahaminya, kamu bisa mulai \n membangun kebiasaan finansial yang baik sejak dini.Materi disusun secara sederhana agar mudah \n dipahami,jadi kamu bisa belajar dengan santai. \n tetap semangat ya dalam belajar dan jangan lupa menyimak setiap bagian dengan baik! \n Di sesi berikutnya akan ada kuis seru yang bisa kamu ikuti untuk mendapatkan poin \n dan meningkatkan level beruangmu 🐻✨ \n\nYuk mulai dan pelajari dasar keuanganmu sekarang!"
+        }
+      ]
+    }
+  ],
   "quizzes": [],
   "achievements": [],
   "userProgress": [],
-  "userAchievements": []
+  "userAchievements": [],
+  "transactions": [
+    {
+      "id": "1775279601423",
+      "userId": "1775274748255",
+      "type": "income",
+      "amount": 35000,
+      "category": "uang jajan",
+      "description": "uang jajan sekolah",
+      "createdAt": "2026-04-04T05:13:21.423Z"
+    }
+  ]
 }

@@ -27,6 +27,7 @@ export const signup = async (req, res) => {
       id: Date.now().toString(),
       username,
       password: hashedPassword,
+      points: 0,
       createdAt: new Date().toISOString()
     }
 
@@ -45,7 +46,7 @@ export const signup = async (req, res) => {
     res.status(201).json({
       message: 'User registered successfully',
       token,
-      user: { id: newUser.id, username: newUser.username }
+      user: { id: newUser.id, username: newUser.username, points: newUser.points }
     })
   } catch (error) {
     console.error('Signup error:', error)
@@ -86,7 +87,7 @@ export const login = async (req, res) => {
     res.json({
       message: 'Login successful',
       token,
-      user: { id: user.id, username: user.username }
+      user: { id: user.id, username: user.username, points: user.points }
     })
   } catch (error) {
     console.error('Login error:', error)
