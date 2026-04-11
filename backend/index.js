@@ -6,6 +6,7 @@ import authRoutes from './src/routes/authRoutes.js'
 import financeRoutes from './src/routes/financeRoutes.js'
 import moduleRoutes from './src/routes/moduleRoutes.js'
 import userRoutes from './src/routes/userRoutes.js'
+import quizRoutes from './src/routes/quizRoutes.js'
 
 dotenv.config()
 
@@ -24,6 +25,7 @@ app.use('/auth', authRoutes)
 app.use('/finance', financeRoutes)
 app.use('/modules', moduleRoutes)
 app.use('/user', userRoutes)
+app.use('/kuis', quizRoutes)
 
 // Start server
 const startServer = async () => {

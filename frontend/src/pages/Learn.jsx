@@ -10,20 +10,20 @@ const modules = [
     type: "materi",
   },
   {
-    id: 2,
+    id: 1,
     title: "Kuis Dasar-dasar Keuangan",
     points: 15,
     type: "Kuis",
   },
   {
-    id: 3,
+    id: 2,
     title: "Anggaran Bulanan",
     description: "Cara membuat dan memantau anggaran",
     points: 35,
     type: "materi",
   },
   {
-    id: 4,
+    id: 2,
     title: "Kuis Anggaran Bulanan",
     points: 15,
     type: "kuis",
