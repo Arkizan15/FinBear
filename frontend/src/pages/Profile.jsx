@@ -1,16 +1,21 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaUserCircle, FaPencilAlt, FaPen } from "react-icons/fa";
+import { FaUserCircle, FaPencilAlt } from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
 
 function Profile() {
   const navigate = useNavigate();
   const fileInputRef = useRef(null);
   const [profileImage, setProfileImage] = useState(null);
-  const userString = localStorage.getItem("user");
-  const user = userString ? JSON.parse(userString) : null;
+  const { user, setUser } = useAuth();
   const token = localStorage.getItem("token");
-  const { setUser } = useAuth();
+  const points = user?.points ?? 0;
+  const bearLevel = 
+         points >= 100
+      ? "Beruang Dewasa"
+      : points >= 50
+        ? "Beruang Remaja"
+        : "Beruang Bayi";
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -85,7 +90,7 @@ function Profile() {
                     className="text-3xl font-bold"
                     style={{ fontFamily: "'Jersey 20', sans-serif" }}
                   >
-                    0
+                    {points}
                   </span>
                 </div>
                 <div className="bg-gray-400 p-4 rounded flex flex-col items-center">
@@ -94,7 +99,7 @@ function Profile() {
                     className="text-2xl font-bold"
                     style={{ fontFamily: "'Jersey 20', sans-serif" }}
                   >
-                    beruang bayi
+                    {bearLevel}
                   </span>
                 </div>
               </div>

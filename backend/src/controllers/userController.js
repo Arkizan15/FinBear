@@ -2,15 +2,33 @@ import { readDB, writeDB } from '../config/database.js'
 
 export const addPoints = async (req, res) => {
   try {
-    const { userId, points } = req.body
+    const { userId, points, moduleId } = req.body
     const db = await readDB()
 
+    // Cek apakah user sudah claim poin untuk modul ini
+    const alreadyClaimed = db.userProgress.find(
+      p => p.userId === userId && p.moduleId === moduleId
+    )
+
+    if (alreadyClaimed) {
+      return res.status(400).json({ error: 'Points already claimed for this module' })
+    }
+
+    // Tambah poin ke user
     const userIndex = db.users.findIndex(u => u.id === userId)
     if (userIndex === -1) {
       return res.status(404).json({ error: 'User not found' })
     }
 
     db.users[userIndex].points += points
+
+    // Simpan progress ke userProgress
+    db.userProgress.push({
+      userId,
+      moduleId,
+      claimedAt: new Date().toISOString()
+    })
+
     await writeDB(db)
 
     res.json({ 

@@ -11,21 +11,21 @@
       "id": "1775274748255",
       "username": "user",
       "password": "$2b$10$k9nh7HAJ05MvnGn9.SDj9.RFjSqLcsZe9tCHjiqWRFH6qGRb2pR9C",
-      "points": 70,
+      "points": 105,
       "createdAt": "2026-04-04T03:52:28.255Z"
     },
     {
       "id": "1775357664854",
       "username": "loremipsum",
       "password": "$2b$10$lYYBu2Wpablr2CaQXkw7FuZQxPxcTt6wULbea7fID1CLNvDOtbyju",
-      "points": 0,
+      "points": 35,
       "createdAt": "2026-04-05T02:54:24.854Z"
     },
     {
       "id": "1775658429506",
       "username": "aldis burger",
       "password": "$2b$10$udl7pWCrSUwuDaVo2hJsOexRffCvktWgC.GVWH/EN1iEwESOXjHOC",
-      "points": 0,
+      "points": 35,
       "createdAt": "2026-04-08T14:27:09.506Z"
     }
   ],
@@ -53,18 +53,36 @@
         },
         {
           "slidenumber": 4,
+          "title": "Passive Income",
           "content": "2. Passive Income (Penghasilan Pasif) \n Penghasilan yang tetap masuk tanpa \n harus bekerja terus-menerus. \n ✅ Contoh: \n • Sewa rumah \n • Dividen saham \n • Bisnis yang sudah berjalan otomatis \n 📌 Ciri: \n • Tidak perlu kerja setiap waktu \n • Bisa tetap dapat uang walau lagi istirahat"
         },
         {
           "slidenumber": 5,
+          "title": "Portfolio Income",
           "content": "3. Portfolio Income \n Penghasilan dari investasi atau aset keuangan \n ✅ Contoh: \n • Keuntungan saham \n • obligasi \n • Reksa dana"
+        },
+        {
+          "slidenumber": 6,
+          "title": "Tabungan",
+          "content": "Tabungan adalah simpanan uang yang berasal dari pendapatan yang disisihkan, \n bertujuan untuk kebutuhan masa depan, dana darurat, \n atau tujuan keuangan tertentu, dan umumnya dapat diambil sewaktu-waktu."
         }
       ]
     }
   ],
   "quizzes": [],
   "achievements": [],
-  "userProgress": [],
+  "userProgress": [
+    {
+      "userId": "1775357664854",
+      "moduleId": 1,
+      "claimedAt": "2026-04-11T03:52:02.197Z"
+    },
+    {
+      "userId": "1775658429506",
+      "moduleId": 1,
+      "claimedAt": "2026-04-11T03:54:37.739Z"
+    }
+  ],
   "userAchievements": [],
   "transactions": [
     {
@@ -75,6 +93,15 @@
       "category": "uang jajan",
       "description": "uang jajan sekolah",
       "createdAt": "2026-04-04T05:13:21.423Z"
+    },
+    {
+      "id": "1775889283900",
+      "userId": "1775658429506",
+      "type": "income",
+      "amount": 10000,
+      "category": "jajan harian",
+      "description": "",
+      "createdAt": "2026-04-11T06:34:43.900Z"
     }
   ]
 }
