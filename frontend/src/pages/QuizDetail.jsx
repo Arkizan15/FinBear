@@ -139,14 +139,14 @@ function QuizDetail() {
           </div>
           <div className="bg-[#E0CEA9] rounded-2xl p-8">
             <h2 className="font-bold text-lg mb-4">
-              Selamat datang di kuis Bab 1: Penghasilan, Tabungan, dan Investasi
+              Selamat datang di {quiz.title}
             </h2>
             <p className="text-sm">
-              Karena Kamu telah menyelesaikan Bab 1: Dasar-Dasar Keuangan.
-              Sekarang saatnya menguji pengetahuanmu mengenai materi yang telah
-              dipelajari. Silakan kerjakan kuis ini dengan teliti. Untuk
-              melanjutkan ke tahap berikutnya dan mendapatkan poin, kamu harus
-              memperoleh skor minimal 70. 
+              Karena Kamu telah menyelesaikan materinya. Sekarang saatnya
+              menguji pengetahuanmu mengenai materi yang telah dipelajari.
+              Silakan kerjakan kuis ini dengan teliti. Untuk melanjutkan ke
+              tahap berikutnya dan mendapatkan poin, kamu harus memperoleh skor
+              minimal 70.
             </p>
           </div>
           <div className="flex justify-end mt-6">

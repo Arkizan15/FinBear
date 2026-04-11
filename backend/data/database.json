@@ -25,7 +25,7 @@
       "id": "1775658429506",
       "username": "aldis burger",
       "password": "$2b$10$udl7pWCrSUwuDaVo2hJsOexRffCvktWgC.GVWH/EN1iEwESOXjHOC",
-      "points": 35,
+      "points": 85,
       "createdAt": "2026-04-08T14:27:09.506Z"
     },
     {
@@ -34,6 +34,13 @@
       "password": "$2b$10$g2miAr5Jx0Y3WRBk5.wm9eXJZpWCI68//QAPK3XQ4KraFBzmSRLM6",
       "points": 100,
       "createdAt": "2026-04-11T12:34:27.696Z"
+    },
+    {
+      "id": "1775922490441",
+      "username": "bakso",
+      "password": "$2b$10$E6L4JyDmyHaZV.X0t8j3KulBF5fyp.lbw30rQQC4QJNDRoActJIBm",
+      "points": 100,
+      "createdAt": "2026-04-11T15:48:10.441Z"
     }
   ],
   "modules": [
@@ -298,6 +305,36 @@
       "userId": "1775910867696",
       "moduleId": "quiz_2",
       "claimedAt": "2026-04-11T15:37:43.291Z"
+    },
+    {
+      "userId": "1775658429506",
+      "moduleId": "quiz_1",
+      "claimedAt": "2026-04-11T15:46:34.625Z"
+    },
+    {
+      "userId": "1775658429506",
+      "moduleId": 2,
+      "claimedAt": "2026-04-11T15:46:41.155Z"
+    },
+    {
+      "userId": "1775922490441",
+      "moduleId": 1,
+      "claimedAt": "2026-04-11T15:48:44.908Z"
+    },
+    {
+      "userId": "1775922490441",
+      "moduleId": "quiz_1",
+      "claimedAt": "2026-04-11T15:49:07.772Z"
+    },
+    {
+      "userId": "1775922490441",
+      "moduleId": 2,
+      "claimedAt": "2026-04-11T15:49:22.392Z"
+    },
+    {
+      "userId": "1775922490441",
+      "moduleId": "quiz_2",
+      "claimedAt": "2026-04-11T15:53:27.225Z"
     }
   ],
   "userAchievements": [],
