@@ -9,7 +9,7 @@ function MateriDetail() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loading, setLoading] = useState(true);
   const { user, setUser } = useAuth();
-  const isLastSlide = module && currentSlide === module.slides.length - 1;
+  const [alreadyClaimed, setAlreadyClaimed] = useState(false);
 
   useEffect(() => {
     const fetchModule = async () => {
@@ -17,7 +17,8 @@ function MateriDetail() {
         const response = await fetch(`http://localhost:3000/modules/${id}`);
         const data = await response.json();
         setModule(data);
-      } catch (error) {
+        setCurrentSlide(0);
+      } catch (error) {     
         console.error("Error fetching module", error);
       } finally {
         setLoading(false);
@@ -29,6 +30,7 @@ function MateriDetail() {
 
   if (loading) return <div>Loading ...</div>;
   if (!module) return <div>Modul tidak ditemukan</div>;
+  const isLastSlide = currentSlide === module.slides.length;
   const handleClaimPoints = async () => {
     try {
       const response = await fetch("http://localhost:3000/user/points", {
@@ -37,9 +39,16 @@ function MateriDetail() {
         body: JSON.stringify({
           userId: user.id,
           points: module.points,
+          moduleId: module.id,
         }),
       });
       const data = await response.json();
+
+      if (!response.ok) {
+        setAlreadyClaimed(true);
+        return;
+      }
+
       setUser({ ...user, points: data.points });
       navigate("/belajar");
     } catch (error) {
@@ -69,6 +78,19 @@ function MateriDetail() {
             </p>
           </div>
           <div className="flex justify-end mt-6">
+            <div className="flex flex-col items-end gap-2 mt-6">
+              {alreadyClaimed && (
+                <div>
+                  <p className="text-red-600 font-semibold mr-5">
+                    Kamu sudah mengambil poin untuk materi ini
+                  </p>
+                  <p>
+                    Kembali ke halaman belajar untuk mendapatkan poin lebih
+                    banyak lagi
+                  </p>
+                </div>
+              )}
+            </div>
             <button
               onClick={() =>
                 !user ? navigate("/notregistered") : handleClaimPoints()

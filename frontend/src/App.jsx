@@ -10,6 +10,7 @@ import Learn from "./pages/Learn";
 import MateriDetail from "./pages/MateriDetail";
 import QuizDetail from "./pages/QuizDetail";
 import NotRegistred from "./pages/NotRegistered";
+import Finance from "./pages/Finance";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="belajar" element={<Learn />} />
           <Route path="belajar/materi/:id" element={<MateriDetail />} />
           <Route path="belajar/kuis/:id" element={<QuizDetail />} />
+          <Route path="keuangan" element={<Finance />}/>
         </Route>
       </Routes>
     </>
