@@ -18,7 +18,7 @@
       "id": "1775357664854",
       "username": "loremipsum",
       "password": "$2b$10$lYYBu2Wpablr2CaQXkw7FuZQxPxcTt6wULbea7fID1CLNvDOtbyju",
-      "points": 35,
+      "points": 50,
       "createdAt": "2026-04-05T02:54:24.854Z"
     },
     {
@@ -27,6 +27,13 @@
       "password": "$2b$10$udl7pWCrSUwuDaVo2hJsOexRffCvktWgC.GVWH/EN1iEwESOXjHOC",
       "points": 35,
       "createdAt": "2026-04-08T14:27:09.506Z"
+    },
+    {
+      "id": "1775910867696",
+      "username": "charly burger",
+      "password": "$2b$10$g2miAr5Jx0Y3WRBk5.wm9eXJZpWCI68//QAPK3XQ4KraFBzmSRLM6",
+      "points": 100,
+      "createdAt": "2026-04-11T12:34:27.696Z"
     }
   ],
   "modules": [
@@ -65,11 +72,196 @@
           "slidenumber": 6,
           "title": "Tabungan",
           "content": "Tabungan adalah simpanan uang yang berasal dari pendapatan yang disisihkan, \n bertujuan untuk kebutuhan masa depan, dana darurat, \n atau tujuan keuangan tertentu, dan umumnya dapat diambil sewaktu-waktu."
+        },
+        {
+          "slidenumber": 7,
+          "title": "Manfaat Tabungan",
+          "content": "• Tabungan memberikan perlindungan finansial dalam situasi darurat. \n • Membantu merencanakan masa depan dengan lebih baik \n • Memberikan rasa aman dan terhindar dari kecemasan tentang uang."
+        },
+        {
+          "slidenumber": 8,
+          "title": "Investasi",
+          "content": "Investasi adalah kegiatan menanamkan modal atau aset ke dalam suatu instrumen dengan harapan mendapatkan keuntungan di masa depan. Tujuan utama dari investasi adalah untuk mendapatkan keuntungan (return) dari dana yang diinvestasikan, baik dalam bentuk bunga, dividen, maupun apresiasi nilai aset."
+        },
+        {
+          "slidenumber": 9,
+          "title": "Manfaat Utama Investasi",
+          "content": "• Melawan Inflasi \n • Meningkatkan Nilai Kekayaan \n • Menciptakan Pendapatan Pasif \n • Mempersiapkan Masa Depan \n "
+        },
+        {
+          "slidenumber": 10,
+          "title": "Jenis-jenis Investasi",
+          "content": "• Investasi Emas \n Contoh: emas batangan, logam mulia \n Ciri: relatif aman dan stabil \n\n • Investasi Properti \n Contoh: rumah, tanah, kos-kosan \n Ciri: nilai cenderung naik setiap tahun \n\n • Investasi Saham \n Membeli kepemilikan perusahaan \n Keuntungan dari kenaikan harga & dividen"
+        },
+        {
+          "slidenumber": 11,
+          "title": "Jenis-jenis Investasi",
+          "content": "• Investasi Reksa Dana \n Dana dikelola oleh manajer investasi \n Cocok untuk pemula \n\n • Investasi Deposito\n Menyimpan uang di bank dalam jangka waktu tertentu \n Bunga tetap, risiko rendah \n\n • Investasi Obligasi \n Surat utang dari pemerintah/perusahaan \n Dapat bunga (kupon) secara berkala"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Anggaran Bulanan",
+      "description": "Cara membuat dan memantau anggaran",
+      "points": 35,
+      "slides": [
+        {
+          "slidenumber": 1,
+          "title": "Selamat datang di Bab 2: Anggaran Bulanan 📒",
+          "content": "Di bab ini, kamu akan belajar cara membuat dan memantau anggaran bulanan.\nAnggaran adalah rencana keuangan yang membantu kamu mengatur pemasukan dan pengeluaran.\nDengan memahami anggaran, kamu bisa lebih bijak dalam mengelola uang.\n\nYuk mulai belajar!"
+        },
+        {
+          "slidenumber": 2,
+          "title": "💰 Apa itu Anggaran?",
+          "content": "Anggaran adalah rencana penggunaan uang dalam periode tertentu.\n📌 Fungsi anggaran:\n• Mengontrol pengeluaran\n• Menghindari pemborosan\n• Membantu mencapai tujuan keuangan"
+        },
+        {
+          "slidenumber": 3,
+          "title": "📊 Jenis-Jenis Anggaran",
+          "content": "1. Anggaran Kebutuhan Pokok\n• Makanan\n• Transportasi\n• Pendidikan\n\n2. Anggaran Keinginan\n• Hiburan\n• Belanja\n• Jajan\n\n3. Anggaran Tabungan\n• Dana darurat\n• Investasi"
+        },
+        {
+          "slidenumber": 4,
+          "title": "📝 Cara Membuat Anggaran",
+          "content": "1. Catat semua pemasukan\n2. Buat daftar pengeluaran rutin\n3. Pisahkan kebutuhan dan keinginan\n4. Sisihkan untuk tabungan dulu\n5. Pantau pengeluaran setiap hari"
+        },
+        {
+          "slidenumber": 5,
+          "title": "💡 Tips Mengelola Anggaran",
+          "content": "✅ Pakai aturan 50/30/20:\n• 50% untuk kebutuhan pokok\n• 30% untuk keinginan\n• 20% untuk tabungan\n\n📌 Contoh:\nUang jajan Rp 500.000\n• Kebutuhan: Rp 250.000\n• Keinginan: Rp 150.000\n• Tabungan: Rp 100.000"
         }
       ]
     }
   ],
-  "quizzes": [],
+  "quizzes": [
+    {
+      "id": 1,
+      "moduleId": 1,
+      "title": "Kuis Dasar-dasar keuangan",
+      "points": 15,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Apa yang dimaksud dengan penghasilan?",
+          "options": [
+            "Uang yang dikeluarkan untuk belanja",
+            "Uang yang diperoleh dari suatu aktivitas",
+            "Uang yang disimpan di bank",
+            "Uang yang dipinjam"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "Contoh dari active income adalah...",
+          "options": [
+            "Dividen saham",
+            "Sewa rumah",
+            "Gaji karyawan",
+            "Keuntungan reksa dana"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 3,
+          "question": "Apa tujuan utama dari menabung?",
+          "options": [
+            "Untuk membeli barang mewah",
+            "Untuk kebutuhan masa depan dan dana darurat",
+            "Untuk dipinjamkan ke orang lain",
+            "Untuk membayar hutang"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "Yang termasuk passive income adalah...",
+          "options": [
+            "Gaji bulanan",
+            "Upah harian",
+            "Fee freelance",
+            "Dividen saham"
+          ],
+          "answer": 3
+        },
+        {
+          "id": 5,
+          "question": "Contoh dari portfolio income adalah...",
+          "options": [
+            "Uang jajan",
+            "Gaji kerja",
+            "Keuntungan saham",
+            "Sewa kos"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "moduleId": 2,
+      "title": "Kuis Anggaran Bulanan",
+      "points": 15,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Apa yang dimaksud dengan anggaran?",
+          "options": [
+            "Uang yang dipinjam",
+            "Rencana penggunaan uang dalam periode tertentu",
+            "Uang yang dihabiskan",
+            "Uang yang disimpan di bank"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "Berapa persen untuk kebutuhan pokok dalam aturan 50/30/20?",
+          "options": [
+            "20%",
+            "30%",
+            "50%",
+            "70%"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 3,
+          "question": "Apa fungsi utama dari anggaran?",
+          "options": [
+            "Untuk meminjam uang",
+            "Untuk mengontrol pengeluaran",
+            "Untuk membeli barang mewah",
+            "Untuk menghindari menabung"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "Dalam aturan 50/30/20, berapa persen untuk tabungan?",
+          "options": [
+            "50%",
+            "30%",
+            "10%",
+            "20%"
+          ],
+          "answer": 3
+        },
+        {
+          "id": 5,
+          "question": "Langkah pertama dalam membuat anggaran adalah...",
+          "options": [
+            "Belanja kebutuhan",
+            "Catat semua pemasukan",
+            "Sisihkan tabungan",
+            "Buat daftar keinginan"
+          ],
+          "answer": 1
+        }
+      ]
+    }
+  ],
   "achievements": [],
   "userProgress": [
     {
@@ -81,6 +273,31 @@
       "userId": "1775658429506",
       "moduleId": 1,
       "claimedAt": "2026-04-11T03:54:37.739Z"
+    },
+    {
+      "userId": "1775910867696",
+      "moduleId": 1,
+      "claimedAt": "2026-04-11T12:48:48.648Z"
+    },
+    {
+      "userId": "1775357664854",
+      "moduleId": "quiz_1",
+      "claimedAt": "2026-04-11T13:37:54.831Z"
+    },
+    {
+      "userId": "1775910867696",
+      "moduleId": "quiz_1",
+      "claimedAt": "2026-04-11T15:36:54.331Z"
+    },
+    {
+      "userId": "1775910867696",
+      "moduleId": 2,
+      "claimedAt": "2026-04-11T15:37:18.291Z"
+    },
+    {
+      "userId": "1775910867696",
+      "moduleId": "quiz_2",
+      "claimedAt": "2026-04-11T15:37:43.291Z"
     }
   ],
   "userAchievements": [],

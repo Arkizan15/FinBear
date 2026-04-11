@@ -39,3 +39,18 @@ export const addPoints = async (req, res) => {
     res.status(500).json({ error: 'Internal server error' })
   }
 }
+
+export const checkProgress = async (req, res) => {
+  try {
+    const { userId, moduleId } = req.params
+    const db = await readDB()
+
+    const progress = db.userProgress.find(
+      p => p.userId === userId && String(p.moduleId) === String(moduleId)
+    )
+
+    res.json({ completed: !!progress })
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' })
+  }
+}
