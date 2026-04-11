@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import API_URL from "../config";
 
 function MateriDetail() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ function MateriDetail() {
   useEffect(() => {
     const fetchModule = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/modules/${id}`);
+        const response = await fetch(`${API_URL}/modules/${id}`);
         const data = await response.json();
         setModule(data);
         setCurrentSlide(0);
@@ -33,7 +34,7 @@ function MateriDetail() {
   const isLastSlide = currentSlide === module.slides.length;
   const handleClaimPoints = async () => {
     try {
-      const response = await fetch("http://localhost:3000/user/points", {
+      const response = await fetch(`${API_URL}/user/points`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

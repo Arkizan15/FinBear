@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import API_URL from "../config";
 
 function Finance() {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ function Finance() {
   const fetchTransactions = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/finance", {
+      const response = await fetch(`${API_URL}/finance`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -43,7 +44,7 @@ function Finance() {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/finance", {
+      const response = await fetch(`${API_URL}/finance`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +91,7 @@ function Finance() {
   const handleDeleteTransaction = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:3000/finance/${id}`, {
+      const response = await fetch(`${API_URL}/finance/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

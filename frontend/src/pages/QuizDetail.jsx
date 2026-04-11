@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import API_URL from "../config";
 
 function QuizDetail() {
   const { id } = useParams();
@@ -20,7 +21,7 @@ function QuizDetail() {
   useEffect(() => {
     const fetchQuizAndCheckProgress = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/kuis/${id}`);
+        const response = await fetch(`${API_URL}/kuis/${id}`);
         const data = await response.json();
         setQuiz(data);
 
@@ -30,7 +31,7 @@ function QuizDetail() {
         }
 
         const progressResponse = await fetch(
-          `http://localhost:3000/user/progress/${user.id}/${data.moduleId}`,
+          `${API_URL}/user/progress/${user.id}/${data.moduleId}`,
         );
         const progressData = await progressResponse.json();
         setIsEligible(progressData.completed);
@@ -84,7 +85,7 @@ function QuizDetail() {
 
   const handleClaimPoints = async () => {
     try {
-      const response = await fetch("http://localhost:3000/user/points", {
+      const response = await fetch(`${API_URL}/user/points`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
