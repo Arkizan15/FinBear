@@ -59,31 +59,52 @@ FinBear/
 │   ├── public/
 │   │   ├── beruangkecil.glb
 │   │   ├── beruangremaja.glb
-│   │   └── coin.png
+│   │   ├── beruangdewasa.glb
+│   │   ├── beruangfinance.png
+│   │   ├── beruangnotregistered.png
+│   │   ├── coin.png
+│   │   └── logo.png
 │   └── src/
+│       ├── assets/
 │       ├── components/
 │       │   ├── BearModel.jsx
 │       │   ├── Navbar.jsx
 │       │   └── ScrollToTop.jsx
 │       ├── context/
 │       │   └── AuthContext.jsx
-│       └── pages/
-│           ├── Home.jsx
-│           ├── Learn.jsx
-│           ├── MateriDetail.jsx
-│           ├── QuizDetail.jsx
-│           ├── Finance.jsx
-│           ├── Profile.jsx
-│           ├── Login.jsx
-│           ├── Loading.jsx
-│           └── NotRegistered.jsx
+│       ├── pages/
+│       │   ├── Home.jsx
+│       │   ├── Learn.jsx
+│       │   ├── MateriDetail.jsx
+│       │   ├── QuizDetail.jsx
+│       │   ├── Finance.jsx
+│       │   ├── Profile.jsx
+│       │   ├── Login.jsx
+│       │   ├── Loading.jsx
+│       │   └── NotRegistered.jsx
+│       ├── config.js
+│       ├── App.jsx
+│       └── main.jsx
 └── backend/
     ├── data/
     │   └── database.json
     └── src/
         ├── config/
+        │   └── database.js
         ├── controllers/
+        │   ├── authController.js
+        │   ├── financeController.js
+        │   ├── moduleController.js
+        │   ├── quizController.js
+        │   └── userController.js
+        ├── middleware/
+        │   └── authMiddleware.js
         └── routes/
+            ├── authRoutes.js
+            ├── financeRoutes.js
+            ├── moduleRoutes.js
+            ├── quizRoutes.js
+            └── userRoutes.js
 ```
 
 ---

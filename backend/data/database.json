@@ -48,6 +48,13 @@
       "password": "$2b$10$y7tqn0OD05KiBUzbEbHNvegnLlRi8z6haUmSupXULZuWOgDSmVPD.",
       "points": 35,
       "createdAt": "2026-04-12T03:30:39.840Z"
+    },
+    {
+      "id": "1775965865858",
+      "username": "ilham",
+      "password": "$2b$10$7i5nOtI9Qu79Chp3wOstn.hZlEGdety.TyH2K6uXQp91Gz.8NhelW",
+      "points": 0,
+      "createdAt": "2026-04-12T03:51:05.858Z"
     }
   ],
   "modules": [
