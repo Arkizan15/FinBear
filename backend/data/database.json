@@ -18,7 +18,7 @@
       "id": "1775357664854",
       "username": "loremipsum",
       "password": "$2b$10$lYYBu2Wpablr2CaQXkw7FuZQxPxcTt6wULbea7fID1CLNvDOtbyju",
-      "points": 50,
+      "points": 85,
       "createdAt": "2026-04-05T02:54:24.854Z"
     },
     {
@@ -41,6 +41,13 @@
       "password": "$2b$10$E6L4JyDmyHaZV.X0t8j3KulBF5fyp.lbw30rQQC4QJNDRoActJIBm",
       "points": 100,
       "createdAt": "2026-04-11T15:48:10.441Z"
+    },
+    {
+      "id": "1775964639840",
+      "username": "rusdi",
+      "password": "$2b$10$y7tqn0OD05KiBUzbEbHNvegnLlRi8z6haUmSupXULZuWOgDSmVPD.",
+      "points": 35,
+      "createdAt": "2026-04-12T03:30:39.840Z"
     }
   ],
   "modules": [
@@ -335,6 +342,36 @@
       "userId": "1775922490441",
       "moduleId": "quiz_2",
       "claimedAt": "2026-04-11T15:53:27.225Z"
+    },
+    {
+      "userId": "1775926376335",
+      "moduleId": 1,
+      "claimedAt": "2026-04-11T17:01:55.138Z"
+    },
+    {
+      "userId": "1775926376335",
+      "moduleId": 2,
+      "claimedAt": "2026-04-11T17:02:03.746Z"
+    },
+    {
+      "userId": "1775926376335",
+      "moduleId": "quiz_1",
+      "claimedAt": "2026-04-11T17:02:12.986Z"
+    },
+    {
+      "userId": "1775926376335",
+      "moduleId": "quiz_2",
+      "claimedAt": "2026-04-11T17:02:29.514Z"
+    },
+    {
+      "userId": "1775964639840",
+      "moduleId": 1,
+      "claimedAt": "2026-04-12T03:40:21.905Z"
+    },
+    {
+      "userId": "1775357664854",
+      "moduleId": 2,
+      "claimedAt": "2026-04-12T03:40:42.286Z"
     }
   ],
   "userAchievements": [],
