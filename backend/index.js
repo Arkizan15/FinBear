@@ -5,6 +5,8 @@ import { initDB } from './src/config/database.js'
 import authRoutes from './src/routes/authRoutes.js'
 import financeRoutes from './src/routes/financeRoutes.js'
 import moduleRoutes from './src/routes/moduleRoutes.js'
+import userRoutes from './src/routes/userRoutes.js'
+import quizRoutes from './src/routes/quizRoutes.js'
 
 dotenv.config()
 
@@ -12,7 +14,9 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 // Middleware
-app.use(cors())
+app.use(cors({
+  origin: '*'
+}))
 app.use(express.json())
 
 // Routes
@@ -22,6 +26,8 @@ app.get('/', (req, res) => {
 app.use('/auth', authRoutes)
 app.use('/finance', financeRoutes)
 app.use('/modules', moduleRoutes)
+app.use('/user', userRoutes)
+app.use('/kuis', quizRoutes)
 
 // Start server
 const startServer = async () => {
