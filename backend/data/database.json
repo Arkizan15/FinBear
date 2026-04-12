@@ -53,7 +53,7 @@
       "id": "1775965865858",
       "username": "ilham",
       "password": "$2b$10$7i5nOtI9Qu79Chp3wOstn.hZlEGdety.TyH2K6uXQp91Gz.8NhelW",
-      "points": 0,
+      "points": 85,
       "createdAt": "2026-04-12T03:51:05.858Z"
     }
   ],
@@ -379,6 +379,21 @@
       "userId": "1775357664854",
       "moduleId": 2,
       "claimedAt": "2026-04-12T03:40:42.286Z"
+    },
+    {
+      "userId": "1775965865858",
+      "moduleId": 1,
+      "claimedAt": "2026-04-12T03:59:53.145Z"
+    },
+    {
+      "userId": "1775965865858",
+      "moduleId": 2,
+      "claimedAt": "2026-04-12T03:59:59.410Z"
+    },
+    {
+      "userId": "1775965865858",
+      "moduleId": "quiz_1",
+      "claimedAt": "2026-04-12T04:00:07.896Z"
     }
   ],
   "userAchievements": [],
@@ -400,6 +415,24 @@
       "category": "jajan harian",
       "description": "",
       "createdAt": "2026-04-11T06:34:43.900Z"
+    },
+    {
+      "id": "1775966360571",
+      "userId": "1775965865858",
+      "type": "income",
+      "amount": 1000000,
+      "category": "gaji ",
+      "description": "",
+      "createdAt": "2026-04-12T03:59:20.571Z"
+    },
+    {
+      "id": "1775966369507",
+      "userId": "1775965865858",
+      "type": "expense",
+      "amount": 10000,
+      "category": "nasi bungkus",
+      "description": "",
+      "createdAt": "2026-04-12T03:59:29.507Z"
     }
   ]
 }
