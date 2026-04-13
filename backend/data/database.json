@@ -18,7 +18,7 @@
       "id": "1775357664854",
       "username": "loremipsum",
       "password": "$2b$10$lYYBu2Wpablr2CaQXkw7FuZQxPxcTt6wULbea7fID1CLNvDOtbyju",
-      "points": 50,
+      "points": 85,
       "createdAt": "2026-04-05T02:54:24.854Z"
     },
     {
@@ -41,6 +41,20 @@
       "password": "$2b$10$E6L4JyDmyHaZV.X0t8j3KulBF5fyp.lbw30rQQC4QJNDRoActJIBm",
       "points": 100,
       "createdAt": "2026-04-11T15:48:10.441Z"
+    },
+    {
+      "id": "1775964639840",
+      "username": "rusdi",
+      "password": "$2b$10$y7tqn0OD05KiBUzbEbHNvegnLlRi8z6haUmSupXULZuWOgDSmVPD.",
+      "points": 35,
+      "createdAt": "2026-04-12T03:30:39.840Z"
+    },
+    {
+      "id": "1775965865858",
+      "username": "ilham",
+      "password": "$2b$10$7i5nOtI9Qu79Chp3wOstn.hZlEGdety.TyH2K6uXQp91Gz.8NhelW",
+      "points": 85,
+      "createdAt": "2026-04-12T03:51:05.858Z"
     }
   ],
   "modules": [
@@ -335,6 +349,51 @@
       "userId": "1775922490441",
       "moduleId": "quiz_2",
       "claimedAt": "2026-04-11T15:53:27.225Z"
+    },
+    {
+      "userId": "1775926376335",
+      "moduleId": 1,
+      "claimedAt": "2026-04-11T17:01:55.138Z"
+    },
+    {
+      "userId": "1775926376335",
+      "moduleId": 2,
+      "claimedAt": "2026-04-11T17:02:03.746Z"
+    },
+    {
+      "userId": "1775926376335",
+      "moduleId": "quiz_1",
+      "claimedAt": "2026-04-11T17:02:12.986Z"
+    },
+    {
+      "userId": "1775926376335",
+      "moduleId": "quiz_2",
+      "claimedAt": "2026-04-11T17:02:29.514Z"
+    },
+    {
+      "userId": "1775964639840",
+      "moduleId": 1,
+      "claimedAt": "2026-04-12T03:40:21.905Z"
+    },
+    {
+      "userId": "1775357664854",
+      "moduleId": 2,
+      "claimedAt": "2026-04-12T03:40:42.286Z"
+    },
+    {
+      "userId": "1775965865858",
+      "moduleId": 1,
+      "claimedAt": "2026-04-12T03:59:53.145Z"
+    },
+    {
+      "userId": "1775965865858",
+      "moduleId": 2,
+      "claimedAt": "2026-04-12T03:59:59.410Z"
+    },
+    {
+      "userId": "1775965865858",
+      "moduleId": "quiz_1",
+      "claimedAt": "2026-04-12T04:00:07.896Z"
     }
   ],
   "userAchievements": [],
@@ -356,6 +415,24 @@
       "category": "jajan harian",
       "description": "",
       "createdAt": "2026-04-11T06:34:43.900Z"
+    },
+    {
+      "id": "1775966360571",
+      "userId": "1775965865858",
+      "type": "income",
+      "amount": 1000000,
+      "category": "gaji ",
+      "description": "",
+      "createdAt": "2026-04-12T03:59:20.571Z"
+    },
+    {
+      "id": "1775966369507",
+      "userId": "1775965865858",
+      "type": "expense",
+      "amount": 10000,
+      "category": "nasi bungkus",
+      "description": "",
+      "createdAt": "2026-04-12T03:59:29.507Z"
     }
   ]
 }
